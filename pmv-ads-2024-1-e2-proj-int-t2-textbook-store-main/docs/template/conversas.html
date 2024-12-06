@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="conversas.css">
+<title>Educa Livros</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.img/logo-5.jpg" alt="Logo">
+      <div>
+        <h1>Educa Livros</h1>
+        <div class="slogan">Facilitando o Acesso aos Livros Escolares</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Anúncios</a>
+      <a href="#">Quem Somos</a>
+      <button class="botao"> Login </button>
+      <button class="botao"> Cadastro </button>
+    </nav>
+  </header>
+
+<div class="login-container">
+  <div class="login-box">
+    <h1><strong>Conversas</strong></h1>
+
+    <table id="my-table">
+
+      <thead>
+        <tr>
+
+          <th>
+            <div data-placement="bottom">
+              Foto
+            </div>
+          </th>
+          <th>
+            <div data-placement="bottom">
+              Nome do Anunciante
+            </div>
+          </th>
+          <th>
+            <div data-placement="bottom">
+              Data da última mensagem
+            </div>
+          </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr
+          *ngFor="let c of TableData | paginate: {  id: 'foo', itemsPerPage: 3, currentPage: p, totalItems: total }; let i= index;">
+
+          <td>{{ c.imagem }}</td>
+          <td>{{ c.nomeAnunciante }}</td>
+          <td>{{ c.dataUltimaMensagem }}</td>
+        </tr>
+        -
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+
+<div style="background-color:#baf0fa;">
+  <div class="subdivision">
+    <div class="logoETitulo">
+      <img src="logo.img/imgRodape.png" style="width: 150px; height: 100px;" alt="">
+      <div class="textoRodape">
+        <p>© 2024 EducaLivros. Todos os direitos reservados.</p>
+        <p>EducaLivros é o seu mercado de livros confiável, onde a paixão pela leitura encontra a facilidade de comprar e vender livros online. Aqui, você pode encontrar uma vasta seleção de títulos acadêmicos, literários e de entretenimento, todos a apenas um clique de distância.</p>
+        <p>Navegue, compre e venda com segurança: nossa plataforma é dedicada exclusivamente à comunidade de amantes de livros. Seja para desapegar daqueles livros já lidos ou para descobrir novas aventuras literárias, EducaLivros é o lugar ideal.</p>
+        <p>Precisa de ajuda? Nossa equipe de suporte está sempre pronta para assisti-lo.</p>
+        <p>Termos de Uso | Política de Privacidade | FAQ</p>
+      </div>
+    </div>
+    <p style="text-align: center">Todos os direitos reservados Educa Livros LTDA - 2024</p>
+  </div>
+</div>
+
+</body>
+</html>
